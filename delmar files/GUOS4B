@@ -1,0 +1,62 @@
+Script started on Thu 01 Nov 2018 08:07:23 PM CDT
+[sgpgk@delmar ~]$ vi reverse.c
+[?1h=[1;60r[m[m[0m[H[J[60;1H"reverse.c" 21L, 675C[1;1H#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/* this program takes in-line parameters and outputs them in reverse*/
+/* steven guo*/
+
+/* argc counts the amount of arguments passed through parameters*/
+/* argv[] stores all the arguments passed through the parameters*/
+int main(int argc, char* argv[])
+{
+/* this initializes i for the for loop*/
+int i;[13;9H/*the for loop makes i argc - 1 because argv[] stores another arguement after your last one. the i is set to count down so we can output last arguement first*/[14;9Hfor(i = argc - 1; i > 0; i--)[15;9H{[16;17H/* this prints the strings in argv*/[17;17Hprintf("%s  ",argv[i]);[18;9H}
+return 0;
+}
+
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[60;253H18,9[10CAll[18;9H[60;1H[K[60;1H:wq"reverse.c" 21L, 675C written[?1l>
+[sgpgk@delmar ~]$ gcc reverse.c
+[sgpgk@delmar ~]$ ./a.out one two three
+three  two  one  [sgpgk@delmar ~]$ ./out.[K[K[K[Ka.out one two three four five 6
+6  five  four  three  two  one  [sgpgk@delmar ~]$ exti[K[Kit
+exit
+
+Script done on Thu 01 Nov 2018 08:08:18 PM CDT

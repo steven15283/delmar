@@ -1,0 +1,21 @@
+Script started on Wed 17 Oct 2018 09:17:06 PM CDT
+[sgpgk@delmar ~]$ bash myContact[K[K[K[K[K[K[K[K[K[K[Kh contact_one.sh 
+enter the string you want to search for
+doe
+John Doe, jdoe@great.com, 800-555-1111, California
+Jane Doe, jand@super.edu, 876-555-1321, New York
+enter another string you want to look for.Type quit to exit
+jane
+Jane Doe, jand@super.edu, 876-555-1321, New York
+enter another string you want to look for.Type quit to exit
+john
+John Doe, jdoe@great.com, 800-555-1111, California
+John Smith, bsmith@fast.net, 780-555-1234, Florida
+enter another string you want to look for.Type quit to exit
+quit
+[sgpgk@delmar ~]$ quit
+bash: quit: command not found
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Wed 17 Oct 2018 09:17:56 PM CDT

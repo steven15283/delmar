@@ -1,0 +1,26 @@
+Script started on Wed 17 Oct 2018 09:19:11 PM CDT
+[sgpgk@delmar ~]$ ls
+=        [0m[01;32mcontact_one.sh[0m  donorFile            [01;32mEmptyDir.txt[0m  GUOS2B  [01;32mHello.c[0m          nothing   results.sh
+500      [01;32mcontacts.sh[0m     donorFilter          [01;36mfile1[0m         GUOS2C  [01;32minfo.sh[0m          over500   shortcut
+[01;32ma.out[0m    [01;32mdifference.sh[0m   donors               fileInfo.sh   GUOS3A  listEmptyDir.sh  [01;34mproject[0m   specialAreaCode
+basic    [01;34mdir1[0m            [01;32meachFile.sh[0m          [01;32mforC.sh[0m       GUOS3B  [01;32mmyContactList[0m    project1  test
+CEnames  divisible.sh    [01;32meachFile_updated.sh[0m  GUOS2A        GUOS3C  [01;32mmyecho.sh[0m        result
+[sgpgk@delmar ~]$ bash d[KfileInfo.sh dir1 nothing forC.sh file1 donors basic
+dir1 exists
+dir1 is a directory file
+nothing exists
+nothing is a regular file
+forC.sh exists
+forC.sh is a regular file
+file1 exists
+file1 is a regular file
+donors exists
+donors is a regular file
+basic exists
+basic is a regular file
+[sgpgk@delmar ~]$ bash fileInfo.sh dir1 nothing forC.sh file1 donors basic[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ko.sh 
+Incorrect input. Usage: bash fileInfo.sh {file1}{file2}{file3}{file etc}
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Wed 17 Oct 2018 09:20:21 PM CDT

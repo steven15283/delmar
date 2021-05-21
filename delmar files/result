@@ -1,0 +1,44 @@
+#!/bin/sh
+#number of  participants
+echo "Enter the total number of participants: "
+read n
+#starting loop for each participant
+while [ $n -gt 0 ]
+do
+#Tanking inputs
+echo "Enter name: "
+read name
+echo "Enter the 1st judge score: "
+read s1
+echo "Enter the 2nd judge score: "
+read s2
+echo "Enter the 3rd judge score: "
+read s3
+#Caculating sum
+m=3
+sum=`expr $s1 + $s2 + $s3`
+
+#printing name and scores
+echo "Name is $name"
+echo "Judges scores are: $s1 $s2 $s3 "
+echo "Average is: "
+
+#Calculating average
+avg=`echo "$sum / $m" | bc -l`
+
+#Printing average
+printf '%0.3f' "$avg"
+
+echo 
+th=7.5
+
+if [ 1 -eq "$(echo "${avg} > ${th}" | bc)" ]
+then
+echo "Good luck tomorrow".
+else
+echo "Better luck next time"
+fi
+# decrement count of n
+n=`expr $n - 1`
+done
+

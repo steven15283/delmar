@@ -1,0 +1,25 @@
+Script started on Wed 17 Oct 2018 09:22:59 PM CDT
+[sgpgk@delmar ~]$ bash donr[KorFilter
+[sgpgk@delmar ~]$ cat specialAreaD[KCode
+NAME            PHONE          JAN     FEB     MAR
+Guy             (916) 343-6410 $250    $100    $175   
+John            (916) 348-4278 $250    $100    $175   
+Elizabeth       (916) 440-1763 $175    $75     $300   
+[sgpgk@delmar ~]$ cat CEnames
+NAME            PHONE          JAN     FEB     MAR
+Christian       (408) 538-2358 $155    $90     $201   
+Chet            (510) 548-5258 $50     $95     $135   
+Elizabeth       (916) 440-1763 $175    $75     $300   
+[sgpgk@delmar ~]$ cat over500
+NAME            PHONE        
+Mike            (510) 548-1278
+Archie          (206) 548-1348
+Guy             (916) 343-6410
+Dan             (406) 298-7744
+John            (916) 348-4278
+Tom             (408) 926-3456
+Elizabeth       (916) 440-1763
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Wed 17 Oct 2018 09:23:34 PM CDT

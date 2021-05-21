@@ -1,0 +1,36 @@
+Script started on Thu 29 Nov 2018 09:01:03 PM CST
+[sgpgk@delmar ~]$ ls[K[Kcd makefile
+[sgpgk@delmar makefile]$ ls
+makefile  prno.c  prone.c  prtwo.c  QE.h  QEmake.c  radicand.c
+[sgpgk@delmar makefile]$ cat makefile
+quadreq:QEmake.c prno.o prone.o prtwo.o radicand.o
+	gcc -o quadreq QEmake.c prno.o prone.o prtwo.o radicand.o -lm
+prno.o:prno.c QE.h
+	gcc -c prno.c
+prone.o:prone.c QE.h
+	gcc -c prone.c
+prtwo.o:prtwo.c QE.h
+	gcc -c prtwo.c
+radicand.o:radicand.c QE.h
+	gcc -c radicand.c
+[sgpgk@delmar makefile]$ make
+gcc -c prno.c
+gcc -c prone.c
+gcc -c prtwo.c
+gcc -c radicand.c
+gcc -o quadreq QEmake.c prno.o prone.o prtwo.o radicand.o -lm
+[sgpgk@delmar makefile]$ ls
+makefile  prno.o   prone.o  prtwo.o  QEmake.c  radicand.c
+prno.c    prone.c  prtwo.c  QE.h     [0m[01;32mquadreq[0m   radicand.o
+[sgpgk@delmar makefile]$ ./quadreq
+Enter integer coefficients of the quadratic equation: a, b, c 1 2 3 
+returned value = -1
+There are no real solutions.
+[sgpgk@delmar makefile]$ ./quadreq
+Enter integer coefficients of the quadratic equation: a, b, c 1 2 1
+returned value = 0
+There is one real solution: -1.0000
+[sgpgk@delmar makefile]$ exit
+exit
+
+Script done on Thu 29 Nov 2018 09:01:55 PM CST

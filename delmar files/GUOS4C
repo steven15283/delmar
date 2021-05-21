@@ -1,0 +1,67 @@
+Script started on Mon 05 Nov 2018 11:57:02 PM CST
+[sgpgk@delmar ~]$ vi trcommand.c
+[?1h=[1;24r[m[m[0m[H[J[24;1HE325: ATTENTION
+Found a swap file by the name ".trcommand.c.swp"
+[10Cowned by: sgpgk   dated: Sun Nov  4 12:55:40 2018
+[9Cfile name: ~sgpgk/trcommand.c
+[10Cmodified: YES
+[9Cuser name: sgpgk   host name: delmar.umsl.edu
+[8Cprocess ID: 13485
+While opening file "trcommand.c"
+[13Cdated: Mon Nov  5 23:56:39 2018
+      NEWER than swap file!
+
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use ":recover" or "vim -r trcommand.c"
+    to recover the changes (see ":help recovery").
+    If you did this already, delete the swap file ".trcommand.c.swp"
+    to avoid this message.
+
+Swap file ".trcommand.c.swp" already exists!
+[O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q)uit, (A)bort:[24;1H[K[24;1H"trcommand.c" 44L, 589C[1;1Hfor(i = 1 ; i <= argc ; i++)
+{
+numbers[i] = *(*(argv[i]));
+}[4;2H[K[5;11H[K[6;1HFILE *ftpr;[6;12H[K[7;1Hftpr = fopen(numbers[3], "r");
+FILE *ftpw;[8;12H[K[9;1Hftpw = fopen(numbers[4], "w");
+char c;[10;8H[K[11;1Hc = fgetc(ftpr);[11;17H[K[12;7H[K[14;1H[K[15;5H[K[16;5H[K[17;1Hwhile(c != EOF)[17;16H[K[18;1H{[18;5H[K[19;5H    if(strcmp(c, numbers1) == 0)[19;37H[K[20;5H    {[20;10H[K[21;5H    fputc(numbers2, ftpw);[22;9Hc = fgetc(ftpr);
+        }[23;11H[K[24;63H33,2-9[8C47%[23;9H[24;1H[K[24;1H:wq"trcommand.c" 44L, 589C written[?1l>
+[sgpgk@delmar ~]$ gcc trcommand.c
+[01m[Ktrcommand.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Ktrcommand.c:13:14:[m[K [01;31m[Kerror: [m[Kinvalid type argument of unary ‘[01m[K*[m[K’ (have ‘[01m[Kint[m[K’)
+ numbers[i] = *(*(argv[i]));
+[01;32m[K              ^[m[K
+[01m[Ktrcommand.c:17:1:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kfopen[m[K’ makes pointer from integer without a cast [enabled by default]
+ ftpr = fopen(numbers[3], "r");
+[01;32m[K ^[m[K
+In file included from [01m[Ktrcommand.c:1:0[m[K:
+[01m[K/usr/include/stdio.h:272:14:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * __restrict__[m[K’ but argument is of type ‘[01m[Kchar[m[K’
+ extern FILE *fopen (const char *__restrict __filename,
+[01;32m[K              ^[m[K
+[01m[Ktrcommand.c:19:1:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kfopen[m[K’ makes pointer from integer without a cast [enabled by default]
+ ftpw = fopen(numbers[4], "w");
+[01;32m[K ^[m[K
+In file included from [01m[Ktrcommand.c:1:0[m[K:
+[01m[K/usr/include/stdio.h:272:14:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * __restrict__[m[K’ but argument is of type ‘[01m[Kchar[m[K’
+ extern FILE *fopen (const char *__restrict __filename,
+[01;32m[K              ^[m[K
+[01m[Ktrcommand.c:29:15:[m[K [01;31m[Kerror: [m[K‘[01m[Knumbers1[m[K’ undeclared (first use in this function)
+  if(strcmp(c, numbers1) == 0)
+[01;32m[K               ^[m[K
+[01m[Ktrcommand.c:29:15:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Ktrcommand.c:29:2:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kstrcmp[m[K’ makes pointer from integer without a cast [enabled by default]
+  if(strcmp(c, numbers1) == 0)
+[01;32m[K  ^[m[K
+In file included from [01m[Ktrcommand.c:3:0[m[K:
+[01m[K/usr/include/string.h:140:12:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kchar[m[K’
+ extern int strcmp (const char *__s1, const char *__s2)
+[01;32m[K            ^[m[K
+[01m[Ktrcommand.c:31:8:[m[K [01;31m[Kerror: [m[K‘[01m[Knumbers2[m[K’ undeclared (first use in this function)
+  fputc(numbers2, ftpw);
+[01;32m[K        ^[m[K
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Mon 05 Nov 2018 11:57:21 PM CST

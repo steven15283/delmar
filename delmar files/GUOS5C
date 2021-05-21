@@ -1,0 +1,51 @@
+Script started on Thu 29 Nov 2018 09:39:20 PM CST
+[sgpgk@delmar ~]$ cat xor.c
+/* steven guo*/
+/*this program preforms XOR encryption on a sequence of characters*/
+#include <stdio.h>
+#include <ctype.h>
+int main()
+{   
+	char c1,c2;
+	char key='&',enc;
+	while(1)
+	{
+        scanf("%c%c",&c1,&c2);
+        if(c1=='^' && (c2=='C' || c2=='D'))
+        break;
+        enc=c1^key;
+        if(iscntrl(enc))
+        printf("%c\n",c1);
+        else
+        printf("%c\n",enc);
+	}
+
+    return 0;
+}
+[sgpgk@delmar ~]$ gcc scor.[K[K[K[K[Kxor.c
+[sgpgk@delmar ~]$ ./a.out
+k
+M
+a
+G
+l
+J
+@
+f
+0
+0
++
++
+=
+=
+`
+F
+~
+X
+^C
+[sgpgk@delmar ~]$ quit
+bash: quit: command not found
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Thu 29 Nov 2018 09:40:51 PM CST

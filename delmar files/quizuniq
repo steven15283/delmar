@@ -1,0 +1,18 @@
+Script started on Mon 29 Oct 2018 08:30:30 PM CDT
+[sgpgk@delmar ~]$ uniq -c RepeatedLines
+      4 C programming
+      1 C Programming
+      3 Java programming
+      1 C programming
+      1 C++ programming
+      3 Python programming
+      1 C programming
+[sgpgk@delmar ~]$ uniq -u RepeatedLines
+C Programming
+C programming
+C++ programming
+C programming
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Mon 29 Oct 2018 08:30:59 PM CDT

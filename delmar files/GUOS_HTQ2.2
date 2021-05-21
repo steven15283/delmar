@@ -1,0 +1,103 @@
+Script started on Tue 04 Dec 2018 10:35:42 PM CST
+[sgpgk@delmar ~]$ cd HTQ2v6
+[sgpgk@delmar HTQ2v6]$ che[K[K[Kgit checkout br_ave[K[K[Kmax
+M	Two_fn.c
+Already on 'br_max'
+[sgpgk@delmar HTQ2v6]$ cat Two_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        if(a > b)
+	return a;
+	else
+	return b;
+}
+float aver(float a, float b){
+        return 2.0;
+}
+[sgpgk@delmar HTQ2v6]$ gcc To[Kwo_fn.c
+[sgpgk@delmar HTQ2v6]$ ./a.out
+1.2 2.3
+2.300000, 2.000000
+[sgpgk@delmar HTQ2v6]$ git add .
+[sgpgk@delmar HTQ2v6]$ git commit -m 'function max'
+[br_max 872bc99] function max
+ Committer: Steven  Guo <sgpgk@delmar.umsl.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100755 a.out
+[sgpgk@delmar HTQ2v6]$ git checkout master
+Switched to branch 'master'
+[sgpgk@delmar HTQ2v6]$ cat two[K[K[KTwo_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        return 1.0;
+}
+float aver(float a, float b){
+        return (((a)+(b))/2.0);
+}
+[sgpgk@delmar HTQ2v6]$ git merge br_max
+warning: Cannot merge binary files: a.out (HEAD vs. br_max)
+Auto-merging a.out
+CONFLICT (add/add): Merge conflict in a.out
+Auto-merging Two_fn.c
+Automatic merge failed; fix conflicts and then commit the result.
+[sgpgk@delmar HTQ2v6]$ cat two_fn.c
+cat: two_fn.c: No such file or directory
+[sgpgk@delmar HTQ2v6]$ cat Two_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        if(a > b)
+	return a;
+	else
+	return b;
+}
+float aver(float a, float b){
+        return (((a)+(b))/2.0);
+}
+[sgpgk@delmar HTQ2v6]$ exit
+exit
+
+Script done on Tue 04 Dec 2018 10:37:50 PM CST

@@ -1,0 +1,48 @@
+Script started on Sat 22 Sep 2018 09:27:38 PM CDT
+[sgpgk@delmar ~]$ bash results.sh
+Enter the total number of participants: 
+4
+Enter name: 
+steven guo
+Enter the 1st judge score: 
+1
+Enter the 2nd judge score: 
+2
+Enter the 3rd judge score: 
+3
+
+steven guo 1 2 3 Average: 2.00000000000000000000 better luck next time
+Enter name: 
+steven bob
+Enter the 1st judge score: 
+3
+Enter the 2nd judge score: 
+4
+Enter the 3rd judge score: 
+5
+
+steven bob 3 4 5 Average: 4.00000000000000000000 better luck next time
+Enter name: 
+super bob
+Enter the 1st judge score: 
+6
+Enter the 2nd judge score: 
+7
+Enter the 3rd judge score: 
+8
+
+super bob 6 7 8 Average: 7.00000000000000000000 better luck next time
+Enter name: 
+ultra bob
+Enter the 1st judge score: 
+9
+Enter the 2nd judge score: 
+8
+Enter the 3rd judge score: 
+9
+
+ultra bob 9 8 9 Average: 8.66666666666666666666 Good luck tomorrow.
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Sat 22 Sep 2018 09:28:41 PM CDT

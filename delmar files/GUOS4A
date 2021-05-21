@@ -1,0 +1,50 @@
+Script started on Thu 01 Nov 2018 08:14:13 PM CDT
+[sgpgk@delmar ~]$ vi wr[Kod[Krdsize.c
+[?1h=[1;60r[m[m[0m[H[J[60;1H"wordsize.c" 39L, 1182C[1;1H#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/*steven Guo*/
+int main()
+{[8;9H/* this initializes smallest and largest arrays. Also a word array to act as a place holder that i use to scan in and to compare*/[9;9Hchar smallest[20];[10;9Hchar largest[20];[11;9Hchar word[20];[12;10H/* this gets user input*/[13;9Hprintf("enter a word to find smallest and largest. enter a three letter word to exit.\n");[14;9Hscanf("%s", word);[15;10H/* this copys the first word to largest and smallest*/[16;9Hstrcpy(largest, word);[17;9Hstrcpy(smallest, word);[19;10H/* this while loop keeps going until the user enters a three letter word*/[21;9Hwhile(strlen(word) != 3 )[22;9H{[23;9Hprintf("Enter a word: ");[24;9Hscanf("%s", word);[25;10H/* these if statements checks to see if the word the user entered is the largest or smallest. and if it is the smallest or largest word entered, it copies it to smallest or largest */[26;9Hif( strcmp(smallest, word) > 0 )[27;10Hstrcpy(smallest, word);[28;9Hif( strcmp(largest, word) < 0 )[29;10Hstrcpy(largest, word);[30;9H}[33;10H/* this is output*/[34;9Hprintf("the smallest word is: %s\n ", smallest);[35;9Hprintf("the largest word is: %s\n ", largest);
+
+return 0;
+}
+
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[60;253H33,3-10[7CAll[33;10H[60;1H[K[60;1H:wq"wordsize.c" 39L, 1182C written[?1l>
+[sgpgk@delmar ~]$ gcc wr[Kordsize.c
+[sgpgk@delmar ~]$ ./a.out
+enter a word to find smallest and largest. enter a three letter word to exit.
+threee^H
+Enter a word: four
+Enter a word: to
+Enter a word: nine
+Enter a word: ksdlfj
+Enter a word: alsgkjfdasdflk
+Enter a word: werkljt
+Enter a word: bob
+the smallest word is: alsgkjfdasdflk
+ the largest word is: werkljt
+ [sgpgk@delmar ~]$ exit
+exit
+
+Script done on Thu 01 Nov 2018 08:15:19 PM CDT

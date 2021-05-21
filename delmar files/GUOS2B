@@ -1,0 +1,42 @@
+Script started on Sat 22 Sep 2018 09:20:00 PM CDT
+[sgpgk@delmar ~]$ bash divisible.sh
+enter the number that is > 30 and < than 60
+52
+50 is divisble by 5
+45 is divisible by 15
+40 is divisble by 5
+35 is divisble by 5
+30 is divisible by 15
+25 is divisble by 5
+20 is divisble by 5
+15 is divisible by 15
+10 is divisble by 5
+5 is divisble by 5
+[sgpgk@delmar ~]$ bash divisible.sh [K
+enter the number that is > 30 and < than 60
+30
+30 is divisible by 15
+25 is divisble by 5
+20 is divisble by 5
+15 is divisible by 15
+10 is divisble by 5
+5 is divisble by 5
+[sgpgk@delmar ~]$ bash divisible.sh 6[K
+enter the number that is > 30 and < than 60
+60
+60 is divisible by 15
+55 is divisble by 5
+50 is divisble by 5
+45 is divisible by 15
+40 is divisble by 5
+35 is divisble by 5
+30 is divisible by 15
+25 is divisble by 5
+20 is divisble by 5
+15 is divisible by 15
+10 is divisble by 5
+5 is divisble by 5
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Sat 22 Sep 2018 09:20:53 PM CDT

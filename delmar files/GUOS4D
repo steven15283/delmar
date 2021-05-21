@@ -1,0 +1,38 @@
+Script started on Mon 05 Nov 2018 11:57:37 PM CST
+[sgpgk@delmar ~]$ vi llink[K[K[K[K[Klinklist
+[?1h=[1;24r[m[m[0m[H[J[24;1HE325: ATTENTION
+Found a swap file by the name ".linklist.swp"
+[10Cowned by: sgpgk   dated: Wed Oct 31 21:47:53 2018
+[9Cfile name: ~sgpgk/linklist
+[10Cmodified: YES
+[9Cuser name: sgpgk   host name: delmar.umsl.edu
+[8Cprocess ID: 32006
+While opening file "linklist"
+[13Cdated: Mon Nov  5 23:55:56 2018
+      NEWER than swap file!
+
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use ":recover" or "vim -r linklist"
+    to recover the changes (see ":help recovery").
+    If you did this already, delete the swap file ".linklist.swp"
+    to avoid this message.
+
+Swap file ".linklist.swp" already exists!
+[O]pen Read-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q)uit, (A)bort:[24;1H[K[24;1H"linklist" 103L, 2126C[1;1H#include<stdio.h>
+#include<stdlib.h>
+/*structure node*/
+struct Node [4;14H[K[5;1H{[5;11H[K[6;3Hint data; [6;13H[K[7;3Hstruct Node *next; [7;22H[K[8;1H};[8;10H[K[9;9H[K[10;1H[K[11;1H/*the function that inserts a new node in the beginning*/
+void front(struct Node** head, int a)
+{
+struct Node* newnode =(struct Node*) malloc(sizeof(struct Node));[14;67H[K[15;1Hnewnode->data = a;[15;20H[K[16;1Hnewnode->next = (*head);[16;25H[K[17;2H*head)= newnode;[17;18H[K[18;1H}[18;5H[K[19;1H/*this searches for a number that a node holds*/[19;49H[K[20;1Hvoid search(struct Node** head, int a)[20;39H[K[21;1H{[21;5H[K[22;1Hstruct Node *last = *head_ref;
+        while(last->next != NULL)[23;35H[K[24;63H12,1[10CTop[12;1H[24;1H[K[24;1H:wq"linklist" 103L, 2126C written[?1l>
+[sgpgk@delmar ~]$ gcc linklist
+linklist: file not recognized: File format not recognized
+collect2: error: ld returned 1 exit status
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Mon 05 Nov 2018 11:57:59 PM CST

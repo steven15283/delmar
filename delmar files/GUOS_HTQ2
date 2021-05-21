@@ -1,0 +1,72 @@
+Script started on Tue 04 Dec 2018 10:27:51 PM CST
+[sgpgk@delmar ~]$ cd HTQ2v6
+[sgpgk@delmar HTQ2v6]$ git init
+Initialized empty Git repository in /accounts/students/s/sgpgk/HTQ2v6/.git/
+[sgpgk@delmar HTQ2v6]$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	Two_fn.c
+nothing added to commit but untracked files present (use "git add" to track)
+[sgpgk@delmar HTQ2v6]$ add[K[K[Kgit add . 
+[sgpgk@delmar HTQ2v6]$ git commit -m 'start'
+[master (root-commit) 1233bf8] start
+ Committer: Steven  Guo <sgpgk@delmar.umsl.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 18 insertions(+)
+ create mode 100644 Two_fn.c
+[sgpgk@delmar HTQ2v6]$ git branch br_max
+[sgpgk@delmar HTQ2v6]$ git checkout br_max
+Switched to branch 'br_max'
+[sgpgk@delmar HTQ2v6]$ git status
+# On branch br_max
+nothing to commit, working directory clean
+[sgpgk@delmar HTQ2v6]$ git checkout master
+Switched to branch 'master'
+[sgpgk@delmar HTQ2v6]$ git status
+# On branch master
+nothing to commit, working directory clean
+[sgpgk@delmar HTQ2v6]$ git checkout -b br_aver
+Switched to a new branch 'br_aver'
+[sgpgk@delmar HTQ2v6]$ git status
+# On branch br_aver
+nothing to commit, working directory clean
+[sgpgk@delmar HTQ2v6]$ cat two_fn.c
+cat: two_fn.c: No such file or directory
+[sgpgk@delmar HTQ2v6]$ cat Two_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        return 1.0;
+}
+float aver(float a, float b){
+        return 2.0;
+}
+[sgpgk@delmar HTQ2v6]$ exit
+exit
+
+Script done on Tue 04 Dec 2018 10:30:14 PM CST

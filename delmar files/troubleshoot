@@ -1,0 +1,33 @@
+Script started on Thu 01 Nov 2018 06:39:40 PM CDT
+[sgpgk@delmar ~]$ vi reverse.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"reverse.c" 14L, 266C[1;1H#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char * argv[])
+{[9;9Hfor(int i = argc - 1; i < 0; i--)[10;9H{[11;17Hprintf("%s  ",  argv[i]);[12;9H}
+return EXIT_FAILURE;
+}
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~[0m[24;63H1,1[11CAll[1;1H[24;1H[K[24;1H:wq"reverse.c" 14L, 266C written[?1l>
+[sgpgk@delmar ~]$ gcc -o reverse.c
+gcc: fatal error: no input files
+compilation terminated.
+[sgpgk@delmar ~]$ gcc -o reverse.c one two three
+gcc: error: one: No such file or directory
+gcc: error: two: No such file or directory
+gcc: error: three: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Thu 01 Nov 2018 06:40:28 PM CDT

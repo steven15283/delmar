@@ -1,0 +1,26 @@
+Script started on Wed 17 Oct 2018 08:54:12 PM CDT
+[sgpgk@delmar ~]$ bash listEmptyDir.sh dir1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+=        [0m[01;32mcontact_one.sh[0m  donorFile            [01;32mEmptyDir.txt[0m  GUOS2B   listEmptyDir.sh  [01;34mproject[0m     specialAreaCode
+500      [01;32mcontacts.sh[0m     donorFilter          [01;36mfile1[0m         GUOS2C   [01;32mmyContactList[0m    project1    test
+[01;32ma.out[0m    [01;32mdifference.sh[0m   donors               fileInfo.sh   GUOS3A   [01;32mmyecho.sh[0m        result
+basic    [01;34mdir1[0m            [01;32meachFile.sh[0m          [01;32mforC.sh[0m       [01;32mHello.c[0m  nothing          results.sh
+CEnames  divisible.sh    [01;32meachFile_updated.sh[0m  GUOS2A        [01;32minfo.sh[0m  over500          shortcut
+[sgpgk@delmar ~]$ bash listEmptyDir.sh dir1
+dir1/emptydir is empty
+dir1/emptydir1 is empty
+dir1/emptydir2 is empty
+dir1/project3 is not empty
+[sgpgk@delmar ~]$ cat EmptyDir.txt
+
+dir1/emptydir
+dir1/emptydir1
+dir1/emptydir2
+[sgpgk@delmar ~]$ cd dir1[K[K[K[K[K[K[Kbash listEmptyDir.sh
+wrong usage format is bash listEmptyDir.sh  {directory}
+[sgpgk@delmar ~]$ b[Kcd dir1
+[sgpgk@delmar dir1]$ ls
+[0m[01;34memptydir[0m  [01;34memptydir1[0m  [01;34memptydir2[0m  emptyfile  emptyfile1  [01;34mproject3[0m
+[sgpgk@delmar dir1]$ exit
+exit
+
+Script done on Wed 17 Oct 2018 08:56:19 PM CDT

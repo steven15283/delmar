@@ -1,0 +1,51 @@
+nput file name
+FILE="donors"
+SPL="specialAreaCode"
+NAMES="CEnames"
+OVER="over500"
+
+#writing headres into files
+printf '%-15s %-14s %-7s %-7s %s\n' "NAME" "PHONE" "JAN" "FEB" "MAR"  > $SPL
+printf '%-15s %-14s %-7s %-7s %s\n' "NAME" "PHONE" "JAN" "FEB" "MAR" > $NAMES
+printf '%-15s %-13s\n' "NAME" "PHONE"  > $OVER
+
+#variable to compare the over 500 dontaions
+cmp=500
+
+#reading file contents from files
+while read var
+do
+    first=$(echo $var | awk '{print $1}')
+    last=$(echo $var | awk '{print $2}')
+    ph=$(echo $var | awk '{print $3}')
+    jd=$(echo $var | awk '{print $4}')
+    fd=$(echo $var | awk '{print $5}')
+    md=$(echo $var | awk '{print $6}')
+    
+    if [ $last == "Savage" ]; then
+        last="Savauge"
+    fi
+
+    #getting the area code from phone number
+    code=$(echo $ph | cut -d "(" -f2 | cut -d ")" -f1)
+
+    #if area code is 916 then writing the contents into file
+    if [ $code == "916" ]; then
+        printf '%-15s %-14s %-7s %-7s %-7s\n' "$first $last" "$ph" "$""$jd" "$""$fd" "$""$md"  >> $SPL
+    fi
+
+    #if forst name strts with C or E, then writing the contents into file
+    if [[ ${first:0:1} == 'E' || ${first:0:1} == 'C' ]]; then
+        printf '%-15s %-14s %-7s %-7s %-7s\n' "$first $last" "$ph" "$""$jd" "$""$fd" "$""$md"  >> $NAMES
+    fi
+
+    sum=`echo "$jd + $fd + $md" | bc -l`
+    #if dontaion is over 500, then writing the contents into file
+    if [ $(bc <<< "$sum > $cmp") -eq 1 ]; then
+        printf '%-15s %-8s\n' "$first $last" "$ph"  >> $OVER
+    fi
+    #echo $first $last $ph $jd $fd $md $sum
+
+done < $FILE
+
+sort -k 2 $OVER > temp.txt && mv temp.txt $OVER

@@ -1,0 +1,16 @@
+Script started on Mon 29 Oct 2018 07:41:15 PM CDT
+[sgpgk@delmar ~]$ diff Spring19 Fall19
+2,3c2,3
+< Spring 2019
+< Mo/We 9:00 - 11:00 am
+---
+> Fall 2019
+> Mo/We 10:00 - 11:30 am
+6c6
+< Tu/Th 9:30 - 10:30 am
+---
+> Tu/Th 10:30 - 11:30 am
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Mon 29 Oct 2018 07:41:39 PM CDT

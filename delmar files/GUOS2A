@@ -1,0 +1,66 @@
+Script started on Sat 22 Sep 2018 09:17:16 PM CDT
+[sgpgk@delmar ~]$ bash info.sh
+info.sh [name of file] [name of directory]
+[sgpgk@delmar ~]$ bash info.sh newfile
+info.sh [name of file] [name of directory]
+[sgpgk@delmar ~]$ bash info.sh[K[K[K.sh newfile dir1
+This is the name of the script:
+info.sh
+the date right now is Sat Sep 22 21:17:48 CDT 2018
+the current user is sgpgk
+the current working directory is /accounts/students/s/sgpgk
+the unix machine is delmar.umsl.edu
+the name of the login shell is /bin/bash
+file newfile contains this:
+echo "Hello"
+this is the listing of directory dir1
+newfile
+The total number of parameters is: 2
+this is the calendar for october of 2018
+    October 2018    
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+
+this is the disk usage
+Filesystem                    1K-blocks       Used Available Use% Mounted on
+/dev/mapper/delmar_rhel-root    8181760    2130232   6051528  27% /
+devtmpfs                        8119712          0   8119712   0% /dev
+tmpfs                           8131664          0   8131664   0% /dev/shm
+tmpfs                           8131664     545720   7585944   7% /run
+tmpfs                           8131664          0   8131664   0% /sys/fs/cgroup
+/dev/sdc1                       6281212    2855772   3425440  46% /usr/local
+/dev/sdb1                      19521008   14364332   5156676  74% /accounts
+/dev/sda1                        508588     153736    354852  31% /boot
+/dev/sdd1                     104806368   21910584  82895784  21% /accounts/students
+/dev/mapper/delmar_rhel-var     6379520    3470560   2908960  55% /var
+emersonfast:/accounts        2683043840 1719499776 963544064  65% /admiral_archive/accounts
+tmpfs                           1626336          0   1626336   0% /run/user/550106
+tmpfs                           1626336          0   1626336   0% /run/user/100044517
+tmpfs                           1626336          0   1626336   0% /run/user/982726
+tmpfs                           1626336          0   1626336   0% /run/user/1052706
+tmpfs                           1626336          0   1626336   0% /run/user/620269
+tmpfs                           1626336          0   1626336   0% /run/user/100135453
+tmpfs                           1626336          0   1626336   0% /run/user/100073001
+tmpfs                           1626336          0   1626336   0% /run/user/555075
+tmpfs                           1626336          0   1626336   0% /run/user/318823
+tmpfs                           1626336          0   1626336   0% /run/user/148360
+tmpfs                           1626336          0   1626336   0% /run/user/100029788
+tmpfs                           1626336          0   1626336   0% /run/user/1112982
+tmpfs                           1626336          0   1626336   0% /run/user/1011491
+tmpfs                           1626336          0   1626336   0% /run/user/743406
+tmpfs                           1626336          0   1626336   0% /run/user/11487
+tmpfs                           1626336          0   1626336   0% /run/user/100065006
+tmpfs                           1626336          0   1626336   0% /run/user/1051720
+tmpfs                           1626336          0   1626336   0% /run/user/1052732
+tmpfs                           1626336          0   1626336   0% /run/user/100049938
+tmpfs                           1626336          0   1626336   0% /run/user/100056135
+tmpfs                           1626336          0   1626336   0% /run/user/227072
+tmpfs                           1626336          0   1626336   0% /run/user/1054715
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Sat 22 Sep 2018 09:17:52 PM CDT

@@ -1,0 +1,198 @@
+Script started on Thu 29 Nov 2018 09:26:26 PM CST
+[sgpgk@delmar ~]$ cat reversestr.c
+/* this program reverses a given string */ 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void reverse(char * before, char * after)
+{
+int i=0;
+
+	for(i=strlen(before)-1;i>=0;i--)
+	{
+	after[strlen(before)-i-1]=before[i];
+	}
+}
+int main()
+{
+char*before="steven guo";
+char*after=(char*)malloc((strlen(before)+1)*sizeof(char));
+reverse(before,after);
+printf("reversed string:%s",after);
+return 0;
+}
+[sgpgk@delmar ~]$ gcc -g reversesrt.[K[K[Ktr.c
+[sgpgk@delmar ~]$ gdb
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-110.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+(gdb) file a.out
+Reading symbols from /accounts/students/s/sgpgk/a.out...done.
+(gdb) list 10
+5	
+6	void reverse(char * before, char * after)
+7	{
+8	int i=0;
+9	
+10		for(i=strlen(before)-1;i>=0;i--)
+11		{
+12		after[strlen(before)-i-1]=before[i];
+13		}
+14	}
+(gdb) br 11
+Breakpoint 1 at 0x4005d8: file reversestr.c, line 11.
+(gdb) list 20
+15	int main()
+16	{
+17	char*before="steven guo";
+18	char*after=(char*)malloc((strlen(before)+1)*sizeof(char));
+19	reverse(before,after);
+20	printf("reversed string:%s",after);
+21	return 0;
+22	}
+(gdb) br 19
+Breakpoint 2 at 0x400642: file reversestr.c, line 19.
+(gdb) run 3
+Starting program: /accounts/students/s/sgpgk/a.out 3
+
+Breakpoint 2, main () at reversestr.c:19
+19	reverse(before,after);
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-222.el7.x86_64
+(gdb) run 2
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /accounts/students/s/sgpgk/a.out 2
+
+Breakpoint 2, main () at reversestr.c:19
+19	reverse(before,after);
+(gdb) display i
+No symbol "i" in current context.
+(gdb) display after [][K[K[K[][K[K
+1: after = 0x602010 ""
+(gdb) display before
+2: before = 0x400710 "steven guo"
+(gdb) bt
+#0  main () at reversestr.c:19
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+(gdb) display disk
+No symbol "disk" in current context.
+(gdb) display before[[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kwhat is after
+No symbol "is" in current context.
+(gdb) what is before
+No symbol "is" in current context.
+(gdb) whatis before[i]
+type = char
+(gdb) display before[i]
+3: before[i] = 111 'o'
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "o")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+3: before[i] = 117 'u'
+(gdb) display before[i]
+4: before[i] = 117 'u'
+(gdb) display after[i]
+5: after[i] = 0 '\000'
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 18896] will be killed.
+
+Quit anyway? (y or n) n
+Not confirmed.
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "ou")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+5: after[i] = 0 '\000'
+4: before[i] = 103 'g'
+3: before[i] = 103 'g'
+(gdb) display after[i]
+6: after[i] = 0 '\000'
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "oug")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+6: after[i] = 0 '\000'
+5: after[i] = 0 '\000'
+4: before[i] = 32 ' '
+3: before[i] = 32 ' '
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "oug ")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+6: after[i] = 0 '\000'
+5: after[i] = 0 '\000'
+4: before[i] = 110 'n'
+3: before[i] = 110 'n'
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "oug n")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+6: after[i] = 110 'n'
+5: after[i] = 110 'n'
+4: before[i] = 101 'e'
+3: before[i] = 101 'e'
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "oug ne")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+6: after[i] = 32 ' '
+5: after[i] = 32 ' '
+4: before[i] = 118 'v'
+3: before[i] = 118 'v'
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "oug nev")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+6: after[i] = 103 'g'
+5: after[i] = 103 'g'
+4: before[i] = 101 'e'
+3: before[i] = 101 'e'
+(gdb) cont
+Continuing.
+
+Breakpoint 1, reverse (before=0x400710 "steven guo", after=0x602010 "oug neve")
+    at reversestr.c:12
+12		after[strlen(before)-i-1]=before[i];
+6: after[i] = 117 'u'
+5: after[i] = 117 'u'
+4: before[i] = 116 't'
+3: before[i] = 116 't'
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 18896] will be killed.
+
+Quit anyway? (y or n) y
+[sgpgk@delmar ~]$ exit
+exit
+
+Script done on Thu 29 Nov 2018 09:38:48 PM CST

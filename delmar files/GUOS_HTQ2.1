@@ -1,0 +1,119 @@
+Script started on Tue 04 Dec 2018 10:31:39 PM CST
+[sgpgk@delmar ~]$ cd HTQ2v6
+[sgpgk@delmar HTQ2v6]$ git checkout br_aver
+M	Two_fn.c
+Already on 'br_aver'
+[sgpgk@delmar HTQ2v6]$ cat Two_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        return 1.0;
+}
+float aver(float a, float b){
+        return (((a)+(b))/2.0);
+}
+[sgpgk@delmar HTQ2v6]$ gcc Two_fnc[K.c
+[sgpgk@delmar HTQ2v6]$ ./a.out
+1.2 2.3
+1.000000, 1.750000
+[sgpgk@delmar HTQ2v6]$ git  [Kadd .
+[sgpgk@delmar HTQ2v6]$ git commit -m 'function aver'
+[br_aver 84e58f2] function aver
+ Committer: Steven  Guo <sgpgk@delmar.umsl.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100755 a.out
+[sgpgk@delmar HTQ2v6]$ git checkout master
+Switched to branch 'master'
+[sgpgk@delmar HTQ2v6]$ cat two_fn.c
+cat: two_fn.c: No such file or directory
+[sgpgk@delmar HTQ2v6]$ cat To[Kwo_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        return 1.0;
+}
+float aver(float a, float b){
+        return 2.0;
+}
+[sgpgk@delmar HTQ2v6]$ git merge br_aver
+Updating 1233bf8..84e58f2
+Fast-forward
+ Two_fn.c |   2 +-
+ a.out    | Bin 0 -> 8560 bytes
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100755 a.out
+[sgpgk@delmar HTQ2v6]$ cat two[K[K[KTwo_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        return 1.0;
+}
+float aver(float a, float b){
+        return (((a)+(b))/2.0);
+}
+[sgpgk@delmar HTQ2v6]$ checkout br_maxgcheckout br_maxicheckout br_maxtcheckout br_max checkout br_max[C[C[C
+Switched to branch 'br_max'
+[sgpgk@delmar HTQ2v6]$ cat Two_fn.c
+/* program two_fn.c */
+/* contains two simple functions */
+#include <stdio.h>
+float max(float, float);
+float aver(float, float);
+int main(){
+        float c;
+        float d;
+        scanf("%f%f", &c, &d);
+        printf("%f, %f\n", max(c, d), aver(c, d));
+        return 0;
+}
+float max(float a, float b){
+        return 1.0;
+}
+float aver(float a, float b){
+        return 2.0;
+}
+[sgpgk@delmar HTQ2v6]$ exit
+exit
+
+Script done on Tue 04 Dec 2018 10:34:25 PM CST

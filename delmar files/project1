@@ -1,0 +1,27 @@
+Script started on Fri 31 Aug 2018 12:50:00 PM CDT
+[sgpgk@delmar ~]$ pwd
+/accounts/students/s/sgpgk
+[sgpgk@delmar ~]$ cat Hello.c
+/* Example of a simple C program */
+#include <stdio.h>
+
+main()
+{
+     int n, i;
+     printf("How many times would you like to print \"Hello\"?\n");
+     scanf("%d", &n);
+     for (i=1; i<=n; i++)
+       printf("Hello!\n");
+
+     return 0;
+}
+[sgpgk@delmar ~]$ gcc Hello.c
+[sgpgk@delmar ~]$ ./a.out
+How many times would you like to print "Hello"?
+3
+Hello!
+Hello!
+Hello!
+[sgpgk@delmar ~]$ exit
+
+Script done on Fri 31 Aug 2018 12:57:32 PM CDT
