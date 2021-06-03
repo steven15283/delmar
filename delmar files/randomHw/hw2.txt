@@ -1,0 +1,153 @@
+// OPENING COMMENT //
+
+// TITLE: Fermat's Last Theorem "Near Misses"
+// NAME OF FILE: Main.java
+// EXTERNAL FILES NEEDED: none
+// EXTERNAL FILES CREATED: none
+// NAMES OF PROGRAMMERS: Steven Guo & Samed Ganibegovic
+// EMAIL OF PROGRAMMERS: sgpgk@mail.umsl.edu  & sg93f@mail.umsl.edu
+// COURSE NUMBER: 4500
+// SECTION NUMBER: 001
+// DATE FINISHED/SUBMITTED : 14 February 2020
+// EXPLANATION OF PROGRAM: This program helps a user find the "nearest misses" or numbers closest to 0 for
+//						   Fermat's Last Theorem, which states that there are no natural numbers like 1,2,3
+//						   for x,y,z such that x^n + y^n = z^n, where 2<n<12.
+// RESOURCES USED: GeeksForGeeks
+
+import java.util.*;
+
+public class Main {
+    
+    static int pow_sum; //(x^n + y^n)	
+    static int z_pow; //z^n
+    static int z_ext_pow;//(z+1)^n
+    static int diff_pow_sum_z_pow;//(x^n + y^n)-z^n
+    static int diff_z_ext_pow_sum;//(z+1)^n-(x^n+y^n)
+	
+	// Formula variables
+    static int x, y, z, k, n;
+    
+    
+	static double nearest_miss, relative_size; 
+	static double smallest_relative_size = 0; //this keeps track of the smallest relative size, so it can be outputted at the end
+	static double smallest_nearest_miss = 100000.00;// this is the variable to track the smallest near miss, so it can be outputted at the end
+	
+	// these variables keeps track of the combinations of the smallest relative miss so far, so it can be outputted at the end
+	static int nearest_x=0; 
+	static int nearest_y=0; 
+	static int nearest_z=0; 
+	
+	// Function which displays the smallest relative miss
+	// Displays x, y, z, nearest miss of the formula, and the percentage of the miss
+    public static void print_smallest()
+    {
+        System.out.println("smallest possible miss:");
+	    System.out.println("|x: "+nearest_x+"|y: "+nearest_y+"|z: "+nearest_z+"|nearest miss: "+ smallest_nearest_miss+"|relative_size: "+ smallest_relative_size);
+    }
+    
+    //this function keeps track of the smallest relative miss so it can be outputted at the end
+    public static void set_nearest_variables(int x, int y, int z, double nearest_miss, double relative_size)
+    {
+    	// smallest_nearest_miss, nearest_x, nearest_y, nearest_z, smallest_relative_size: all these variables keep track of the smallest relative miss so far
+        smallest_nearest_miss=nearest_miss;
+	    nearest_x=x;
+	    nearest_y=y;
+	    nearest_z=z;
+	    smallest_relative_size=relative_size;
+    }
+    
+    // Function which will compare two doubles:(x^n + y^n)-z^n and (z+1)^n-(x^n+y^n)
+    // the smaller of the two will be returned
+    public static double compare_miss(double miss1, double miss2)
+    {
+	    if(miss1 < miss2)  // Comparison to find the nearest miss.
+	    {
+	        return miss1;
+	    }
+	    else
+	    { 
+	        return miss2;
+	    }
+    }
+    
+    // Function which will use all variables to calculate the outcome of the formula 
+    // The function will output the combinations of near misses each time there is a smaller near miss
+    public static void find_nearest(int x, int y)
+    {
+        for(int i= x; i<k;i++)// this loops through variable x - the limit to compare different combinations
+	    {
+	        for(int j = y; j<k;j++)//this loops through variable y - the limit to compare different combinations
+	        {
+	            pow_sum = (int)(Math.pow(i, n) + Math.pow(j, n)); //(x^n + y^n)
+	            
+	            z = ((int)Math.pow(pow_sum, 1.0 / n)); //z
+	            z_pow = (int)Math.pow(z, n); //z^n.
+	            z_ext_pow =(int)Math.pow((int)z+1,n); //(z+1)^n
+	            
+	            diff_pow_sum_z_pow = (pow_sum -  z_pow); //(x^n + y^n)-z^n
+	            diff_z_ext_pow_sum = (z_ext_pow - pow_sum); //(z+1)^n-(x^n+y^n)
+                
+	            nearest_miss=compare_miss(diff_pow_sum_z_pow,diff_z_ext_pow_sum);// compares two different misses
+	            relative_size = nearest_miss/pow_sum;
+	            
+	            // Displays the current near miss if the current miss is smaller than the one recorded
+	            if(smallest_nearest_miss > nearest_miss)
+	            {
+	                 
+	                 System.out.println("|x: "+i+"|y: "+j+"|z: "+z+"|nearest miss: "+ nearest_miss+"|relative_size: "+ relative_size);// outputs the next smallest relative miss
+	                 set_nearest_variables(i,j,z,nearest_miss,relative_size);// this will record(track) the smaller relative miss
+	            }
+	            
+	        }
+	    }
+    }
+    
+	public static void main (String[] args)     
+	{
+		
+		//User interactions and loops to make sure user follows directions
+	    Scanner s = new Scanner(System.in); 
+	    System.out.print("Enter value for n (2<n<12)"); 
+	    n = s.nextInt();
+	    
+	    // User cannot enter value less than or equal to 2 and greater than or equal to 12 for n
+	    while(n<=2 || n>=12)
+	    {
+	        System.out.println("error enter a value from 3-11");
+	        n = s.nextInt(); 
+	    }
+	   
+	    System.out.println("Enter value for k (limits the range of x and y possiblities to test. Enter a value greater than 10)");
+	    k = s.nextInt();
+	    
+	    // User must enter a value greater than or equal to 10 for k
+	     while(k<=10)
+	    {
+	        System.out.println("error enter a value from 11-1000000");
+	        k = s.nextInt(); 
+	    }
+	    
+	    System.out.print("Enter value for x (10 <= x <= "+ k + ")"); 
+	    x = s.nextInt();
+	    
+	    while(x<10 || x>k)
+	    {
+	        System.out.println("error enter a value from 10-" + k);
+	        x = s.nextInt(); 
+	    }
+	    System.out.print("Enter value for y (10 <= y <= "+ k + ")"); 
+	    y = s.nextInt();
+	    
+	    while(y<10 || y>k)
+	    {
+	        System.out.println("error enter a value from 10-" + k);
+	        y = s.nextInt(); 
+	    }
+	    
+	    // Function calls
+	    find_nearest(x, y); //this function runs the loops to find the smallest relative miss
+	    print_smallest();// outputs the smallest relative miss found
+	    
+	   
+	}
+}
